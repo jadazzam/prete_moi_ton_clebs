@@ -9,8 +9,9 @@
         <%= f.input :breed %>
         <%= f.input :gender %>
         <%= f.input :description %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
         <%= f.button :submit, class: 'btn btn-warning' %>
-        <%= link_to "", new_dog_path, class: "btn btn-warning btn-lg" %>
       <% end %>
     </div>
   </div>

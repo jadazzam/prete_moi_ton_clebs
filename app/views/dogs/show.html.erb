@@ -1,4 +1,11 @@
- <h1><%= @dog.name %></h1>
- <p><%= @dog.age %></p>
- <p><%= @dog.breed %></p>
+
+
+  <h1><%= @dog.name %></h1>
+  <p><%= @dog.age %></p>
+  <p><%= @dog.breed %></p>
+  <p><%= @dog.gender%></p>
+  <p><%= @dog.description %></p>
+  <%= cl_image_tag @dog.photo, height: 300, width: 400, crop: :fill %>
+
+
 

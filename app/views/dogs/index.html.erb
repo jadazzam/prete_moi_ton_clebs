@@ -3,6 +3,7 @@
   <div class="row">
     <% @dogs.each do |dog| %>
       <h2><%= dog.name %></h2>
+            <%= link_to "#{dog.name}", dog_path(dog)%>
     <% end %>
 
     <%= link_to "Add your dog", new_dog_path, class: "btn btn-warning btn-lg" %>

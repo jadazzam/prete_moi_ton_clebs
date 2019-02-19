@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+  <div class="row">
+    <% @dogs.each do |dog| %>
+            <h2><%= dog.name %></h2>
+    <% end %>
+
+    <%= link_to "Add your dog", dog_path, class: "btn btn-warning btn-lg" %>
+    </div>
+  </div>
+</div>

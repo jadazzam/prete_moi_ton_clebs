@@ -1,25 +1,25 @@
-<%= "#{https://picsum.photos/200/300?image=portraits}".html_safe %>
+<!--  <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %> -->
+
+<h1><%= @user.name %></h1>
+  <p><%= @user.address %></p>
+  <p><%= @user.email %></p>s
+  <p><%= @user.description %></p>
+  <p><%= @user.ratings %></p>
+
+
+
+Edit | Delete | Back
+<!--
+<% @users.each do |user| %>
+  <%= link_to user.name, user_path(user) %>
+<% end %> -->
+
+
+<!--
  <h1>Jad Azzam </h1>
  <p> 27 ans </p>
  <p> Propriétaire de {COCO} </p>
  <p> Coco est un Shiba Inu de 4 ans, très joueur et aime gambader dans la forêt.
   Vit en appartement, il aime être sorti très régulièrement (environ 5 fois par jour).
   N'aime pas les personnes âgées.
-  Info complémentaires : Etant en léger surpoids, il doit manger ses rations de croquettes light uniquement le matin à 10h et le soir à 19h.
-) </p>
-
-
-
-
-<!-- <h1><%= @user.name %></h1>
-<p><%= @user.address %></p>
-<p><%= @user.email %></p>
-<p><%= @user.description %></p>
-<p><%= @user.ratings %></p> -->
-
-<!-- app/views/restaurants/index.html.erb -->
-<% @users.each do |user| %>
-  <%= link_to user.name, user_path(user) %>
-<% end %>
-
-edit | delete | back
+  Info complémentaires : Etant en léger surpoids, il doit manger ses rations de croquettes light uniquement le matin à 10h et le soir à 19h.</p> -->

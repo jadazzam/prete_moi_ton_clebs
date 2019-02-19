@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  grid-template-columns: 400px 1fr 1fr 1fr;
+  grid-template-rows: 50% 25% 25%;
+  margin-top: 50px;
+
+}
+
+#photo {
+  grid-row: 1 / span 4;
+  grid-column: 1 / span 2;
+}

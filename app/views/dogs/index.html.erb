@@ -1,12 +1,35 @@
-<div class="container">
-  <div class="row">
-  <div class="row">
-    <% @dogs.each do |dog| %>
-      <h2><%= dog.name %></h2>
-            <%= link_to "#{dog.name}", dog_path(dog)%>
-    <% end %>
-
-    <%= link_to "Add your dog", new_dog_path, class: "btn btn-warning btn-lg" %>
-    </div>
+<div class="banner" style="">
+  <div class="banner-content">
+    <h1>Prête moi ton Clebs!</h1>
+    <p>Ton chien est seul aujourd'hui ?</p>
+    <!-- <button class="button"><span>Je m'en occupe!</span></button> -->
+    <%= link_to "Je m'en occupe!", new_dog_path, class: "btn btn-warning btn-lg" %>
   </div>
 </div>
+
+<div class=container">
+  <div class="row">
+    <% @dogs.each do |dog| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: url(https://source.unsplash.com/300x300/?dog);">
+          <div class="card-category">Nearby</div>
+          <div class="card-description">
+            <div>
+              <%= link_to "#{dog.name}", dog_path(dog)%>
+              <p><%="#{dog.breed}"%></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+  <%# @dog.each_slice(3) do |dogs| %>
+      <%#div class="row">
+        <% dogs.each do |dog| %>
+          <%#div class="col-md-4">*dog.name*</div>
+        <% end %>
+      <%#/div>
+    <%# end %>

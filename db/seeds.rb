@@ -27,7 +27,7 @@ puts 'Creating dogs...😢🐶'
 dog1 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: "16 villa gaudelet 75011 paris",
+    address: "11 Rue Lapeyrere 75018 Paris",
     description: Faker::Address.city,
     )
 
@@ -111,7 +111,7 @@ dog7.save!
 dog8 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: "17 Rue de Dunkerque 75010 Paris",
+    address: "13 Rue de Trétaigne 75018 Paris",
     description: Faker::Address.city,
     )
 
@@ -123,7 +123,7 @@ dog8.save!
 dog9 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: "16 rue goncourt 75010",
+    address: "65 Rue du Mont-Cenis 75018 Paris",
     description: Faker::Address.city,
     )
 
@@ -135,7 +135,7 @@ dog9.save!
 dog10 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: "75 rue oberkampf 75011 paris",
+    address: "22 Rue Lapeyrere 75018 Paris",
     description: Faker::Address.city,
     )
 

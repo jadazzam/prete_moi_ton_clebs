@@ -1,9 +1,9 @@
 <h3> Clebs' status </h3>
   <ul>
-    <li> Reservation 1 | <%= link_to 'Show my reservation', reservation_path(@reservations) %> </li>
-    <li> Reservation 2 |  Show my reservation </li>
-    <li> Reservation 3 |  Show my reservation </li>
-    <li> Reservation 4 |  Show my reservation </li>
+    <% @reservations.each do |reservation|
+      %>
+    <li> Reservation | <%= link_to 'Show my reservation', reservation_path(reservation) %> </li>
+    <% end %>
   </ul>
 
 

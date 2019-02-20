@@ -7,10 +7,9 @@
   <div class="gender"><%= @dog.gender%></gender>
   <div class="description"><%= @dog.description %></description>
     </div>
-    <%= link_to "Envoyer ma demande", dogs_path, class: "btn btn-lg" %>
+      <%= simple_form_for [@dog, @reservation] do |f| %>
+        <%= f.button :submit, "Envoyer ma demande", class: "btn btn-lg" %>
+      <% end %>
   </div>
 </div>
 
-<%= simple_form_for [@dog, @reservation] do |f| %>
-  <%= f.button :submit, class: 'btn btn-warning' %>
-<% end %>

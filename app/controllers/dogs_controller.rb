@@ -1,7 +1,14 @@
 class DogsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-  def index
+
+  def home
     @dogs = Dog.all
+  end
+
+
+  def index
+    raise
+
   end
 
   def new

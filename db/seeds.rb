@@ -23,7 +23,7 @@
 
 Dog.destroy_all
 
-puts 'Creating dogs...'
+puts 'Creating dogs...😢🐶'
 dog1 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,

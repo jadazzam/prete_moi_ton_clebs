@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'dogs#home'
   resources :dogs, only: [:index, :create, :new, :show]
   resources :users, only: [:edit, :show,]
+  resources :reservations, only: [:index, :new, :create, :show]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

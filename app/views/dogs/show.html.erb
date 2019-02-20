@@ -8,8 +8,9 @@
       <p><%= @dog.breed %></p>
       <p><%= @dog.gender%></p>
       <p><%= @dog.description %></p>
-    </div>
-      <%= link_to "Envoyer ma demande", new_reservation_path, class: "btn btn-lg" %>
+      <%= simple_form_for [@dog, @reservation] do |f| %>
+        <%= f.button :submit, "Envoyer ma demande", class: "btn btn-lg" %>
+      <% end %>
     </div>
   </div>
 </div>

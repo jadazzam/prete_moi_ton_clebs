@@ -1,17 +1,31 @@
-<h3> Clebs' status </h3>
+<h3> Status des clebards </h3>
+  <ul>
+    <% @reservations.each do |reservation|
+      %>
+    <li> <%= reservation.dog.name %> | <%= link_to 'Show my reservation', reservation_path(reservation) %> </li>
+    <% end %>
+  </ul>
 
-  <h2> Haduken</h2>
+
+  <!-- <h2> Haduken</h2>
     <p> 4 ans </p>
     <p> Braque de Weimar </p>
 
     <p> <strong> Accepted ! </strong> </p>
+ -->
 
+
+
+<!--
 TODO :
 - afficher toutes mes réservations
 ==> récupérer toutes mes réservations dans reservations#index
 ==> toutes les afficher avec comme infos :
-- nom du chien
+- dog's name
 - age
 - breed
 - adress
-- statut
+- status
+
+<%#= Reservation.all %>
+reservation.each do |reservation| <%= link_to 'Show my reservation', reservations_path %>-->

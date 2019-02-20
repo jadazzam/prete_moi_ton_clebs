@@ -6,7 +6,15 @@ class DogsController < ApplicationController
   end
 
   def index
-    @dogs = Dog.all
+    # @dogs = Dog.all
+    @dogs = Dog.where.not(latitude: nil, longitude: nil)
+
+    @markers = @dogs.map do |dog|
+      {
+        lng: dog.longitude,
+        lat: dog.latitude
+      }
+    end
   end
 
   def new

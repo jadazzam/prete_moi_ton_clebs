@@ -2,11 +2,12 @@
   <div class="banner-content">
     <h1>Prête moi ton Clebs!</h1>
     <p>Ton chien est seul aujourd'hui ?</p>
-    <!-- <button class="button"><span>Je m'en occupe!</span></button> -->
-    <%= link_to "Je m'en occupe!", new_user_registration_path, class: "btn btn-warning btn-lg" %>
+    <div class="searchbar active-purple-4 mb-4">
+      <input class="form-control" type="text" placeholder="14 Rue Crespin du Gast, 75011 Paris"aria-label="Search">
+    </div>
+    <%= link_to "Je m'en occupe!", dogs_path, class: "btn btn-lg" %>
   </div>
 </div>
-
 <div class=container">
   <div class="row">
     <% @dogs.each do |dog| %>

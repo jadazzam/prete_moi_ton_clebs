@@ -26,8 +26,16 @@
   margin-bottom: 30px;
 }
 
-.button {
-  background-color: #5789a0;
+.searchbar input[type=text] {
+    border: 1px solid #e67e21;
+    box-shadow: 0 0 0 1px #e67e21;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn {
+  background-color: #e67e21;
   color: white;
   border-radius: 15px;
   border:none;
@@ -38,14 +46,14 @@
   transition: all 0.5s;
 }
 
-.button span {
+.btn span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.btn span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -54,11 +62,11 @@
   transition: 0.5s;
 }
 
-.button:hover span {
+.btn:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+.btn:hover span:after {
   opacity: 1;
   right: 0;
 }

@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_120439) do
     t.bigint "dog_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "confirmed", null: false
+    t.boolean "confirmed"
     t.bigint "user_id"
     t.index ["dog_id"], name: "index_reservations_on_dog_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"

@@ -28,7 +28,7 @@ dog1 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "11 Rue Lapeyrere 75018 Paris",
-    description: Faker::Address.city,
+    description: "Very cute, likes to run fast",
     )
 
 url1 = "https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -40,7 +40,7 @@ dog2 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "107 rue du faubourg du temple 75010 paris",
-    description: Faker::Address.city,
+    description: "Very fat, likes to cuddle",
     )
 
 url2 = "https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -52,7 +52,7 @@ dog3 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "10 rue montcalm 75018 paris",
-    description: Faker::Address.city,
+    description: "Sleepy, very sleepy",
     )
 
 url3 = "https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -64,7 +64,7 @@ dog4 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "67 boulevard ornano 75018 paris",
-    description: Faker::Address.city,
+    description: "Playful & very friendly",
     )
 
 url4 = "https://images.pexels.com/photos/1345191/pexels-photo-1345191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -76,7 +76,7 @@ dog5 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "67 rue philippe de girard 75018 paris",
-    description: Faker::Address.city,
+    description: "Lovely and calm",
     )
 
 url5 = "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -88,7 +88,7 @@ dog6 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "117 Rue Saint-Maur 75011 Paris",
-    description: Faker::Address.city,
+    description: "Constantly asleep",
     )
 
 url6 = "https://images.pexels.com/photos/733416/pexels-photo-733416.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -100,7 +100,7 @@ dog7 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "17 Rue de Belleville 75019 Paris",
-    description: Faker::Address.city,
+    description: "Superactive dog",
     )
 
 url7 = "https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -112,7 +112,7 @@ dog8 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "13 Rue de Trétaigne 75018 Paris",
-    description: Faker::Address.city,
+    description: "Allergic to other dogs",
     )
 
 url8 = "https://images.pexels.com/photos/374898/pexels-photo-374898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -124,7 +124,7 @@ dog9 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "65 Rue du Mont-Cenis 75018 Paris",
-    description: Faker::Address.city,
+    description: "Cute, extremely cute",
     )
 
 url9 = "https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -136,7 +136,7 @@ dog10 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "22 Rue Lapeyrere 75018 Paris",
-    description: Faker::Address.city,
+    description: "Scared from strangers",
     )
 
 url10 = "https://images.pexels.com/photos/460823/pexels-photo-460823.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

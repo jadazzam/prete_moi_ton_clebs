@@ -1,9 +1,11 @@
 
-  <h1> My dog of the day </h1>
+<h1> My dog of the day </h1>
+<ul>
+  <li><%= @reservation.dog.name %></li>
+  <li><%= @reservation.dog.age %></li>
+  <li><%= @reservation.dog.description %></li>
+</ul>
 
-    <%= @reservation.dog.name %>
-    <%= @reservation.dog.age %>
-    <%= @reservation.dog.description %>
   <!--   <%= @reservation.confirmed?  %>
  -->
 <%= link_to 'Back', root_path,  class: 'btn btn-warning' %>

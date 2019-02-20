@@ -1,12 +1,16 @@
 <div class="wrapper">
-  <%= cl_image_tag @dog.photo, height: 300, width: 400, crop: :fill, id: "photo" %>
-  <div class="name"><h1><%= @dog.name %></h1></div>
-  <div class="age"><%= @dog.age %></div>
-  <div class="address"><%= @dog.address %></div>
-  <div class="breed"><%= @dog.breed %></div>
-  <div class="gender"><%= @dog.gender%></gender>
-  <div class="description"><%= @dog.description %></description>
+  <div class="grid">
+    <%= cl_image_tag @dog.photo, height: 300, width: 400, crop: :fill, id: "photo" %>
+    <div class="description">
+      <h1><%= @dog.name %></h1>
+      <p><%= @dog.age %></p>
+      <p><%= @dog.address %></p>
+      <p><%= @dog.breed %></p>
+      <p><%= @dog.gender%></p>
+      <p><%= @dog.description %></p>
     </div>
-    <%= link_to "Envoyer ma demande", dogs_path, class: "btn btn-lg" %>
+      <%= link_to "Envoyer ma demande", new_user_registration_path, class: "btn btn-lg" %>
+    </div>
   </div>
 </div>
+

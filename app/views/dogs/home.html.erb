@@ -16,9 +16,10 @@
       <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: url(<%= dog.photo.url %>);">
           <div class="card-category">Nearby</div>
+            <%= link_to "", dog_path(dog), class: "card-link" %>
           <div class="card-description">
             <div>
-              <%= link_to "#{dog.name}", dog_path(dog)%>
+              <h2> <%= dog.name %> </h2>
               <p><%= dog.breed %></p>
             </div>
           </div>

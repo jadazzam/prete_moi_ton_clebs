@@ -27,7 +27,7 @@ puts 'Creating dogs...😢🐶'
 dog1 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "11 Rue Lapeyrere 75018 Paris",
     description: Faker::Address.city,
     )
 
@@ -39,7 +39,7 @@ dog1.save!
 dog2 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "107 rue du faubourg du temple 75010 paris",
     description: Faker::Address.city,
     )
 
@@ -51,7 +51,7 @@ dog2.save!
 dog3 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "10 rue montcalm 75018 paris",
     description: Faker::Address.city,
     )
 
@@ -63,7 +63,7 @@ dog3.save!
 dog4 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "67 boulevard ornano 75018 paris",
     description: Faker::Address.city,
     )
 
@@ -75,7 +75,7 @@ dog4.save!
 dog5 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "67 rue philippe de girard 75018 paris",
     description: Faker::Address.city,
     )
 
@@ -87,7 +87,7 @@ dog5.save!
 dog6 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "117 Rue Saint-Maur 75011 Paris",
     description: Faker::Address.city,
     )
 
@@ -99,7 +99,7 @@ dog6.save!
 dog7 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "17 Rue de Belleville 75019 Paris",
     description: Faker::Address.city,
     )
 
@@ -111,7 +111,7 @@ dog7.save!
 dog8 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "13 Rue de Trétaigne 75018 Paris",
     description: Faker::Address.city,
     )
 
@@ -123,7 +123,7 @@ dog8.save!
 dog9 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "65 Rue du Mont-Cenis 75018 Paris",
     description: Faker::Address.city,
     )
 
@@ -135,7 +135,7 @@ dog9.save!
 dog10 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
-    address: Faker::Address.city,
+    address: "22 Rue Lapeyrere 75018 Paris",
     description: Faker::Address.city,
     )
 

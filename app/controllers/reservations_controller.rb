@@ -8,18 +8,11 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
-    @reservation.save
-    redirect_to
-  end
-
-  def new
     @reservation = Reservation.new
+    @reservation.dog_id = params[:dog_id]
+    @reservation.user_id = current_user.id
+    @reservation.save
+    redirect_to reservations_path
   end
 
-  private
-
-  def reservation_params
-    params.require(:reservation).permit(:name, :dog, :description)
-  end
 end

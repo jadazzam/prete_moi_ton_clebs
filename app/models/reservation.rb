@@ -1,4 +1,4 @@
 class Reservation < ApplicationRecord
   belongs_to :dog
-  has_many :user
+  has_many :users
 end

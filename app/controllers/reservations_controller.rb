@@ -10,16 +10,16 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.save
-    redirect_to
+    redirect_to reservations_path
   end
 
-  def new
-    @reservation = Reservation.new
-  end
+  # def new
+  #   @reservation = Reservation.new
+  # end
 
   private
 
   def reservation_params
-    params.require(:reservation).permit(:name, :dog, :description)
+    params.require(:reservation).permit(:dog, :user)
   end
 end

@@ -11,8 +11,11 @@ class DogsController < ApplicationController
     @markers = @dogs.map do |dog|
       {
         lng: dog.longitude,
-        lat: dog.latitude
+        lat: dog.latitude,
+        # infoWindow: render_to_string(partial: "infowindow", locals: { dog: dog }),
+        image_url: helpers.asset_url('clebs.png')
       }
+
     end
   end
 

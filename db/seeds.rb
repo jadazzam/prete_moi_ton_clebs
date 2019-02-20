@@ -27,6 +27,7 @@ puts 'Creating dogs...😢🐶'
 dog1 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 
@@ -38,6 +39,7 @@ dog1.save!
 dog2 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 
@@ -49,6 +51,7 @@ dog2.save!
 dog3 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 
@@ -60,6 +63,7 @@ dog3.save!
 dog4 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 
@@ -71,6 +75,7 @@ dog4.save!
 dog5 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 
@@ -82,6 +87,7 @@ dog5.save!
 dog6 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 
@@ -93,6 +99,7 @@ dog6.save!
 dog7 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 
@@ -104,6 +111,7 @@ dog7.save!
 dog8 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 
@@ -115,6 +123,7 @@ dog8.save!
 dog9 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 
@@ -126,6 +135,7 @@ dog9.save!
 dog10 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
+    address: Faker::Address.city,
     description: Faker::Address.city,
     )
 

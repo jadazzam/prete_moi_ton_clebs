@@ -31,6 +31,7 @@ class DogsController < ApplicationController
 
   def show
     @dog = Dog.find(params[:id])
+    @reservation = Reservation.new
   end
 
   def dog_params

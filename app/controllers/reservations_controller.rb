@@ -14,5 +14,4 @@ class ReservationsController < ApplicationController
     @reservation.save
     redirect_to reservations_path
   end
-
 end

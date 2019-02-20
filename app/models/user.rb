@@ -6,4 +6,3 @@ class User < ApplicationRecord
   has_many :dogs, through: :reservations
   has_many :reservations
 end
-

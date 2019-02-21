@@ -1,16 +1,16 @@
 
-<h1> My dog of the day </h1>
+<h1> Chien du jour </h1>
 <ul>
-  <li><%= @reservation.dog.name %></li>
-  <li><%= @reservation.dog.age %></li>
-  <li><%= @reservation.dog.description %></li>
+  <li>Nom : <%= @reservation.dog.name %></li>
+  <li>Âge : <%= @reservation.dog.age %> ans </li>
+  <li>Description : <%= @reservation.dog.description %></li>
 </ul>
 
   <!--   <%= @reservation.confirmed?  %> -->
-<%= link_to 'Back', root_path,  class: 'btn btn-warning' %>
+<%= link_to 'Retour', root_path,  class: 'btn btn-warning' %>
 
  <!--   Supprimer une réservation  -->
-<%= link_to "Delete", dog_reservation_path([:dog_id]),
+<%= link_to "Supprimer ma réservation", dog_reservation_path([:dog_id]),
       method: :delete,
-      data: { confirm: "Are you sure?" },
+      data: { confirm: "Vraiment ?" },
       class: 'btn btn-warning' %>

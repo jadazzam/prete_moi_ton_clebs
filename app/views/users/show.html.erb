@@ -1,11 +1,11 @@
 <div class="wrapper">
   PHOTO_USER
-  <h1><%= @user.name %></h1>
+  <h1>Pseudo : <%= @user.name %></h1>
 <!--     <p><%#= @user.address %></p> -->
  <!--    <p><%#= @user.email %></p> -->
-    <p><%= @user.phone_number %></p>
-    <p><%= @user.description %></p>
-    <%= link_to 'Back', root_path %>
+    <p>Numéro de télephone : <%= @user.phone_number %></p>
+    <p>Description : <%= @user.description %></p>
+    <%= link_to 'Retour', root_path %>
 </div>
 
 <!--   <%#= link_to 'Edit', edit_user_path(current_user) %> | -->

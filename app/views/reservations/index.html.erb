@@ -2,7 +2,7 @@
   <ul>
     <% @reservations.each do |reservation|
       %>
-    <li> <%= reservation.dog.name %> | <%= link_to 'Show my reservation', reservation_path(reservation) %> </li>
+    <li> <%= reservation.dog.name %> | <%= link_to 'Voir ma réservation', reservation_path(reservation) %> </li>
     <% end %>
   </ul>
 

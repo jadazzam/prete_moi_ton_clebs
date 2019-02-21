@@ -1,8 +1,14 @@
 <h3> Status des clebards </h3>
   <ul>
-    <% @reservations.each do |reservation|
-      %>
-    <li> <%= reservation.dog.name %> | <%= link_to 'Voir ma réservation', reservation_path(reservation) %> </li>
+    <% @reservations.each do |reservation| %>
+    <%= cl_image_tag reservation.dog.photo, height: 300, width: 400, crop: :fill, id: "photo" %>
+    <li> <%= reservation.dog.name %></li>
+    <li> <%= reservation.dog.age %></li>
+    <li> <%= reservation.dog.breed %></li>
+    <li> <%= reservation.dog.gender %></li>
+    <li> <%= reservation.dog.description %></li>
+
+      <%= link_to 'Voir ma réservation', reservation_path(reservation) %> </li>
     <% end %>
   </ul>
 
@@ -20,7 +26,7 @@
 TODO :
 - afficher toutes mes réservations
 ==> récupérer toutes mes réservations dans reservations#index
-==> toutes les afficher avec comme infos :
+==> toutes les afficher avec comme) infos :
 - dog's name
 - age
 - breed

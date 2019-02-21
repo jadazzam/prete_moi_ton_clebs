@@ -7,7 +7,7 @@ class DogsController < ApplicationController
 
   def index
     @dogs = Dog.where.not(latitude: nil, longitude: nil)
-    @dogs = Dog.near(params[:address], 2)
+    @dogs = Dog.near(params[:address], 10)
     @markers = @dogs.map do |dog|
       {
         lng: dog.longitude,

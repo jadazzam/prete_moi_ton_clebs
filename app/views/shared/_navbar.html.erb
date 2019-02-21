@@ -10,7 +10,7 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Cherche par race", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Mes promenades", reservations_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Confie ton clebs", new_dog_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Messagerie", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
@@ -21,17 +21,17 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to user_path(current_user) do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <i class="fas fa-dog"></i> <%= t(".profile", default: "Profil") %>
               <% end %>
             </li>
             <li>
               <%= link_to edit_user_registration_path do %>
-                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Paramètres") %>
+                <i class="fas fa-bone"></i>  <%= t(".settings", default: "Editer") %>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Se déconnecter") %>
+                <i class="fas fa-paw"></i>  <%= t(".sign_out", default: "Ciao") %>
               <% end %>
             </li>
           </ul>

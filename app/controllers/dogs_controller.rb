@@ -1,10 +1,8 @@
 class DogsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-<<<<<<< HEAD
   #home pour ne pas être authentifier
-=======
+
   # ajouter home pour ne pas etre authentifie
->>>>>>> master
 
   def home
     @dogs = Dog.all
@@ -12,7 +10,7 @@ class DogsController < ApplicationController
 
   def index
     @dogs = Dog.where.not(latitude: nil, longitude: nil)
-    @dogs = Dog.near(params[:address], 2)
+    @dogs = Dog.near(params[:address], 10)
     @markers = @dogs.map do |dog|
       {
         lng: dog.longitude,

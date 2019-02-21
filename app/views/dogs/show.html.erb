@@ -10,6 +10,12 @@
       <p><%= @dog.description %></p>
       <%= simple_form_for [@dog, @reservation] do |f| %>
         <%= f.button :submit, "Envoyer ma demande", class: "btn btn-lg" %>
+        <%= link_to "Retirer mon chien", dog_path,
+      method: :delete,
+      data: { confirm: "Are you sure?" },
+      class: 'btn btn-warning' %>
+         <!--   Supprimer une réservation  -->
+
       <% end %>
     </div>
   </div>

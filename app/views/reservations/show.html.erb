@@ -9,8 +9,12 @@
   <!--   <%= @reservation.confirmed?  %> -->
 <%= link_to 'Retour', root_path,  class: 'btn btn-warning' %>
 
- <!--   Supprimer une réservation  -->
-<%= link_to "Supprimer ma réservation", dog_reservation_path([:dog_id]),
-      method: :delete,
-      data: { confirm: "Vraiment ?" },
-      class: 'btn btn-warning' %>
+ <!--   Supprimer une réservation en tant que current_user -->
+  <%= if @current_user == @dog.user  %>
+  <%= link_to "Supprimer ma réservation", dog_reservation_path([:dog_id]),
+    method: :delete,
+    data: { confirm: "Vraiment ?" },
+    class: 'btn btn-warning' %>
+    <%= else
+    redirect_to dog_reservation_path([:dog_id]), notice: "You shall not pass ma gueule!" %>
+  <% end %>

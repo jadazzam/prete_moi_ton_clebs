@@ -1,5 +1,4 @@
 <div class="wrapper">
-  <div class="grid">
     <%= cl_image_tag @dog.photo, height: 300, width: 400, crop: :fill, id: "photo" %>
     <div class="description">
       <h1><%= @dog.name %></h1>
@@ -10,8 +9,14 @@
       <p><%= @dog.description %></p>
       <%= simple_form_for [@dog, @reservation] do |f| %>
         <%= f.button :submit, "Envoyer ma demande", class: "btn btn-lg" %>
+        <%= link_to "Retirer mon chien", dog_path,
+      method: :delete,
+      data: { confirm: "Are you sure?" },
+      class: 'btn btn-warning' %>
+         <!--   Supprimer une réservation  -->
+
       <% end %>
     </div>
-  </div>
 </div>
+
 

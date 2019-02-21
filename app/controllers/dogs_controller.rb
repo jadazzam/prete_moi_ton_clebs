@@ -1,6 +1,10 @@
 class DogsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+<<<<<<< HEAD
   #home pour ne pas être authentifier
+=======
+  # ajouter home pour ne pas etre authentifie
+>>>>>>> master
 
   def home
     @dogs = Dog.all
@@ -16,7 +20,6 @@ class DogsController < ApplicationController
         # infoWindow: render_to_string(partial: "infowindow", locals: { dog: dog }),
         image_url: helpers.asset_url('clebs.png')
       }
-
     end
   end
 
@@ -37,6 +40,12 @@ class DogsController < ApplicationController
   def show
     @dog = Dog.find(params[:id])
     @reservation = Reservation.new
+  end
+
+  def destroy
+    @dog = Dog.find(params[:id])
+    @dog.destroy
+    redirect_to root_path
   end
 
   def dog_params

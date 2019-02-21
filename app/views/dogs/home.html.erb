@@ -15,7 +15,7 @@
     <% @dogs.each do |dog| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: url(<%= dog.photo.url %>);">
-          <div class="card-category">Nearby</div>
+          <div class="card-category">Populaire</div>
             <%= link_to "", dog_path(dog), class: "card-link" %>
           <div class="card-description">
             <div>

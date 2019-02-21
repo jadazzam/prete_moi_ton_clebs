@@ -72,12 +72,10 @@
 }
 
 // BODY -- UNDER BANNER
-
 .wrapper {
+  min-height: calc(100vh - 140px);
   background-color: lightgrey;
 }
-
-
 
 // CARDS
 .container {

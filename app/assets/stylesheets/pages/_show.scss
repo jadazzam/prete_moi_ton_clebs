@@ -1,16 +1,16 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  margin-top: 50px;
+// .grid {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   grid-gap: 10px;
+//   grid-auto-rows: minmax(100px, auto);
+//   margin-top: 50px;
 
-}
+// }
 
 #photo {
   grid-column: 1 ;
   grid-row: 1 / span 4 ;
-  border: 3px solid #e67e21;
+  // border: 3px solid #5386A0;
   border-radius: 20px;
 }
 
@@ -18,6 +18,7 @@
   grid-column: 2 ;
   grid-row: 1 / span 3 ;
   margin-left: 30px;
+  color: #5386A0;
 }
 
 .btn {
@@ -25,4 +26,13 @@
   grid-row: 3 ;
   margin-left: 30px;
   margin-top: 15px;
+}
+
+.dog-show {
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover {
+  color: white;
 }

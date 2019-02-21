@@ -1,22 +1,31 @@
 <div class="wrapper">
-    <%= cl_image_tag @dog.photo, height: 300, width: 400, crop: :fill, id: "photo" %>
-    <div class="description">
-      <h1><%= @dog.name %></h1>
-      <p><%= @dog.age %></p>
-      <p><%= @dog.address %></p>
-      <p><%= @dog.breed %></p>
-      <p><%= @dog.gender%></p>
-      <p><%= @dog.description %></p>
-      <%= simple_form_for [@dog, @reservation] do |f| %>
-        <%= f.button :submit, "Envoyer ma demande", class: "btn btn-lg" %>
-        <%= link_to "Retirer mon chien", dog_path,
-      method: :delete,
-      data: { confirm: "Vraiment ?" },
-      class: 'btn btn-warning' %>
-         <!--   Supprimer une réservation  -->
-
-      <% end %>
-    </div>
+  <div class="dog-show">
+    <div class="card-product">
+      <div class="col-xs-12 col-md-4">
+      <%= cl_image_tag @dog.photo, height: 500, width: 600, crop: :fill, id: "photo" %>
+      </div>
+      </div>
+        <div class="card-product-infos">
+          <div class="col-xs-12 col-md-4">
+            <div class="description">
+            <h1><%= @dog.name %></h1>
+            <p><%= @dog.age %></p>
+            <p><%= @dog.address %></p>
+            <p><%= @dog.breed %></p>
+            <p><%= @dog.gender%></p>
+            <p><%= @dog.description %></p>
+            </div>
+            <%= simple_form_for [@dog, @reservation] do |f| %>
+              <%= f.button :submit, "Envoyer ma demande", class: "btn btn-lg" %>
+              <%= link_to "Retirer mon chien", dog_path,
+            method: :delete,
+            data: { confirm: "Vraiment?" },
+            class: 'btn btn-warning' %>
+            <% end %>
+        </div>
+      </div>
+  </div>
+  </div>
 </div>
 
 

@@ -15,11 +15,15 @@
             <p><%= @dog.description %></p>
             </div>
             <%= simple_form_for [@dog, @reservation] do |f| %>
-              <%= f.button :submit, "Envoyer ma demande", class: "btn btn-lg" %>
-              <%= link_to "Retirer mon chien", dog_path,
+              <% if @dog.user_id != current_user.id %>
+                <%= f.button :submit, "Promene-moi!", class: "btn btn-lg" %>
+              <% end %>
+              <% if @dog.user_id == current_user.id %>
+              <%= link_to "Je veux plus me promener", dog_path,
             method: :delete,
             data: { confirm: "Vraiment?" },
             class: 'btn btn-warning' %>
+            <% end %>
             <% end %>
         </div>
   </div>

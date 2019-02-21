@@ -5,6 +5,10 @@ class DogsController < ApplicationController
     @dogs = Dog.all
   end
 
+  def mine
+    @dogs = Dog.where("user_id = ?", current_user.id)
+  end
+
   def index
     @dogs = Dog.where.not(latitude: nil, longitude: nil)
     @dogs = Dog.near(params[:address], 10)

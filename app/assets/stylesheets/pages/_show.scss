@@ -1,17 +1,13 @@
-// .grid {
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   grid-gap: 10px;
-//   grid-auto-rows: minmax(100px, auto);
-//   margin-top: 50px;
-
-// }
 
 #photo {
   grid-column: 1 ;
   grid-row: 1 / span 4 ;
   // border: 3px solid #5386A0;
   border-radius: 20px;
+}
+
+.card-product-infos {
+  width: 300px;
 }
 
 .description {
@@ -31,8 +27,17 @@
 .dog-show {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 800px;
 }
 
 .btn:hover {
   color: white;
+}
+
+.user-show {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 100px;
 }

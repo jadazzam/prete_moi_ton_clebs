@@ -1,31 +1,23 @@
-<h1> Chien du jour </h1>
-<ul>
-  <li>Nom : <%= @reservation.dog.name %></li>
-  <li>Âge : <%= @reservation.dog.age %> ans </li>
-  <li>Description : <%= @reservation.dog.description %></li>
-</ul>
-
-  <!--   <%= @reservation.confirmed?  %> -->
-<%= link_to 'Retour', root_path,  class: 'btn btn-warning' %>
-
- <!--   Supprimer une réservation en tant que current_user -->
-  <%= if @current_user == @dog.user  %>
-  <%= link_to "Supprimer ma réservation", dog_reservation_path([:dog_id]),
-    method: :delete,
-    data: { confirm: "Vraiment ?" },
-    class: 'btn btn-warning' %>
-    <%= else
-    redirect_to dog_reservation_path([:dog_id]), notice: "You shall not pass ma gueule!" %>
-  <% end %>
-
-
-
-<!--   UX - message de confirmation sous forme d'alerte après suppression
-
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+<div class="wrapper">
+  <div class="dog-show">
+      <div class="card-product">
+        <h1 class="headerdog">Aujourd-hui vous promenez <%= @reservation.dog.name %>!</h1>
+          <div class="col-xs-12 col-md-4">
+          <div class="card-product-infos">
+            <%= cl_image_tag @reservation.dog.photo, height: 500, width: 600, crop: :fill, id: "photo" %>
+          <ul>
+            <li><%= @reservation.dog.name %></li>
+            <li><%= @reservation.dog.age %> ans </li>
+            <li><%= @reservation.dog.description %></li>
+          </ul>
+          <%= link_to 'Retour', reservations_path,  class: 'btn btn-warning' %>
+          <%= link_to "Je ne suis plus disponible", reservation_path,
+                      method: :delete,
+                      data: { confirm: "Vraiment?" },
+                      class: 'btn btn-warning' %>
+            </div>
+          </div>
+    </div>
   </div>
- -->
+</div>
+

@@ -1,5 +1,4 @@
 <div class="wrapper">
-  <div class="grid">
     <%= cl_image_tag @dog.photo, height: 300, width: 400, crop: :fill, id: "photo" %>
     <div class="description">
       <h1><%= @dog.name %></h1>
@@ -12,8 +11,6 @@
         <%= f.button :submit, "Envoyer ma demande", class: "btn btn-lg" %>
       <% end %>
     </div>
-  </div>
 </div>
 
-<%= link_to 'Delete', root_path,  class: 'btn btn-warning' %>
 

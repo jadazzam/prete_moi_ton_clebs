@@ -1,7 +1,10 @@
 class DogsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+<<<<<<< HEAD
   #home pour ne pas être authentifier
 
+=======
+>>>>>>> master
   # ajouter home pour ne pas etre authentifie
 
   def home

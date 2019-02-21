@@ -1,7 +1,6 @@
 class ReservationsController < ApplicationController
   def index
-    # current_user = User.find(params[:id])
-    @reservations = Reservation.all
+    @reservations = Reservation.where("user_id = ?", current_user.id)
   end
 
   def show

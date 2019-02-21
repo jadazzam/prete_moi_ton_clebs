@@ -6,6 +6,11 @@
   <li><%= @reservation.dog.description %></li>
 </ul>
 
-  <!--   <%= @reservation.confirmed?  %>
- -->
+  <!--   <%= @reservation.confirmed?  %> -->
 <%= link_to 'Back', root_path,  class: 'btn btn-warning' %>
+
+ <!--   Supprimer une réservation  -->
+<%= link_to "Delete", dog_reservation_path([:dog_id]),
+      method: :delete,
+      data: { confirm: "Are you sure?" },
+      class: 'btn btn-warning' %>

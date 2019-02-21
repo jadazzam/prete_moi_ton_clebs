@@ -16,7 +16,6 @@ class DogsController < ApplicationController
         # infoWindow: render_to_string(partial: "infowindow", locals: { dog: dog }),
         image_url: helpers.asset_url('clebs.png')
       }
-
     end
   end
 
@@ -36,6 +35,12 @@ class DogsController < ApplicationController
   def show
     @dog = Dog.find(params[:id])
     @reservation = Reservation.new
+  end
+
+  def destroy
+    @dog = Dog.find(params[:id])
+    @dog.destroy
+    redirect_to root_path
   end
 
   def dog_params

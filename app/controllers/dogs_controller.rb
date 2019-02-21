@@ -1,5 +1,6 @@
 class DogsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
+  #home pour ne pas être authentifier
 
   def home
     @dogs = Dog.all
@@ -25,6 +26,7 @@ class DogsController < ApplicationController
 
   def create
     @dog = Dog.new(dog_params)
+    @dog.user = current_user
     if @dog.save
       redirect_to dog_path(@dog)
     else

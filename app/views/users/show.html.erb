@@ -1,10 +1,7 @@
 <div class="wrapper">
-<!--     <p><%#= @user.address %></p> -->
- <!--    <p><%#= @user.email %></p> -->
-    <p>Numéro de téléphone : <%= @user.phone_number %></p>
-    <p>Description : <%= @user.description %></p>
-    <%= link_to 'Retour', root_path %>
+  <div class="card-product-infos">
+    <h1> <%= @user.name %></h1>
+    <p>Tel: <%= @user.phone_number %></p>
+    <p>Moi: <%= @user.description %></p>
+  </div>
 </div>
-
-<!--   <%#= link_to 'Edit', edit_user_path(current_user) %> | -->
-

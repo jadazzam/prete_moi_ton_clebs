@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <h1>Mes clebards</h1>
+  <div class="margin-container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+      <div class="row">
+        <% @dogs.each do |dog| %>
+          <div class="col-xs-12 col-sm-3">
+            <div class="card" style="background-image: url(<%= dog.photo.url %>);">
+              <div class="card-category">À proximité</div>
+                  <%= link_to "", dog_path(dog), class: "card-link" %>
+              <div class="card-description">
+                <div>
+                  <h2> <%= dog.name %> </h2>
+                  <p><%= dog.breed %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y; -->

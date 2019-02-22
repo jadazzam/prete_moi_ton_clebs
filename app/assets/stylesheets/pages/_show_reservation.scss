@@ -1,6 +1,6 @@
 .profile-card{
   padding: 20px;
-  border-radius: 3px;
+  border-radius: 30px;
   background-color: white;
   box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
   min-height: 300px;
@@ -22,9 +22,9 @@
   img {
     width: 200px;
     height: 200px;
+    border-radius: 100px;
     position: absolute;
     z-index: 5;
-
   }
 }
 

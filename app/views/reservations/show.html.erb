@@ -5,8 +5,8 @@
           <div class="col-xs-12 col-md-4">
           <div class="card-product-infos">
             <%= cl_image_tag @reservation.dog.photo, height: 500, width: 600, crop: :fill, id: "photo" %>
-          <%= link_to 'Retour', reservations_path,  class: 'btn btn-warning' %>
-          <%= link_to "Je ne suis plus disponible", reservation_path,
+          <%= link_to 'Retour', user_reservations_path,  class: 'btn btn-warning' %>
+          <%= link_to "Je ne suis plus disponible", user_reservation_path,
                       method: :delete,
                       data: { confirm: "Vraiment?" },
                       class: 'btn btn-warning' %>

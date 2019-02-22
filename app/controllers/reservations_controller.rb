@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.where("user_id = ?", current_user.id)
   end
 
   def show
@@ -12,12 +12,12 @@ class ReservationsController < ApplicationController
     @reservation.dog_id = params[:dog_id]
     @reservation.user_id = current_user.id
     @reservation.save
-    redirect_to reservations_path
+    redirect_to user_reservations_path(current_user)
   end
 
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    redirect_to reservations_path
+    redirect_to user_reservations_path
   end
 end

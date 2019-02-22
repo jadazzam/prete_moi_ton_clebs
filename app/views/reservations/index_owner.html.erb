@@ -21,7 +21,7 @@
             <% else %>
               <%= simple_form_for [reservation.dog, reservation] do |f| %>
                 <%= f.input :confirmed, :as => :hidden, :input_html => { :value => true } %>
-                <%= f.submit "Accepter", class: "btn btn-primary" %>
+                <%= f.submit "Accepter", class: "btn btn-primary"  %>
               <% end %>
               <%= simple_form_for [reservation.dog, reservation] do |f| %>
                 <%= f.input :confirmed, :as => :hidden, :input_html => { :value => false } %>

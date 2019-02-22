@@ -12,6 +12,8 @@
             <h3 class="headers"><%= reservation.dog.name %></h3>
             <p class="headers"><%= reservation.dog.age %></p>
             <p class="headers"><%= reservation.dog.description %></p>
+            <p class="headers">From: <%= reservation.starts_at %></p>
+            <p class="headers">To: <%= reservation.ends_at %></p>
           </div>
           <div class="col-xs-12 col-md-3" class="status-of-reservation">
             <% if reservation.confirmed == nil %>

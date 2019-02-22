@@ -1,0 +1,18 @@
+.status-of-reservation {
+  height: 10em;
+  display: flex;
+  align-items: center;
+}
+
+#en-attente {
+  color: blue;
+}
+
+#valide {
+  color: green;
+}
+
+#refuse {
+  color: red;
+}
+

@@ -1,7 +1,10 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.where("user_id = ?", current_user.id)
-    @reservations.order(created_at: :desc)
+    @reservations = Reservation.where("user_id = ?", current_user.id).order(created_at: :desc)
+  end
+
+  def index_owner
+    @reservations = Reservation.select { |reservation| reservation.dog.user == current_user }
   end
 
   def show
@@ -14,6 +17,12 @@ class ReservationsController < ApplicationController
     @reservation.user_id = current_user.id
     @reservation.save
     redirect_to user_reservations_path(current_user)
+  end
+
+  def update
+    @reservation = Reservation.find(params[:id])
+    @reservation.confirmed = params[:reservation][:confirmed]
+    @reservation.save
   end
 
   def destroy

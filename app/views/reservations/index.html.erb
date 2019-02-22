@@ -13,14 +13,14 @@
             <p class="headers"><%= reservation.dog.age %></p>
             <p class="headers"><%= reservation.dog.description %></p>
           </div>
-          <div class="col-xs-12 col-md-3">
-          <button class="btn btn-info">En attente</button>
-          <button class="btn btn-warning">Confirmé</button>
-          <button class="btn btn-warning">Refusé</button>
-          <button class="btn btn-success">Validé</button>
-          <%#= link_to "Supprimer ma réservation", dog_reservation_path([:dog_id]),
-             method: :delete,
-             data: { confirm: "Confirmez-vous votre annulation ?" } %>
+          <div class="col-xs-12 col-md-3" class="status-of-reservation">
+            <% if reservation.confirmed == nil %>
+              <p id="en-attente">En attente</p>
+            <% elsif reservation.confirmed == true %>
+              <p id="valide">Validé</p>
+            <% else %>
+              <p id="refuse">Refusé</p>
+            <% end %>
           </div>
       </div>
     </div>

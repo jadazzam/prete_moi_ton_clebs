@@ -2,10 +2,6 @@
   <h1 class="headers">Mes clebards</h1>
   <div class="margin-container">
     <div class="row">
-      <div class="row">
-      </div>
-          <%= link_to "Ajouter un chien", new_dog_path, class: "btn btn-lg"%>
-      </div>
         <% @dogs.each do |dog| %>
           <div class="col-xs-12 col-md-4">
             <div class="card" style="background-image: url(<%= dog.photo.url %>);">
@@ -20,5 +16,9 @@
             </div>
           </div>
         <% end %>
+      </div>
+      <div class="row">
+      </div>
+          <%= link_to "Ajouter un chien", new_dog_path, class: "btn btn-lg"%>
       </div>
     </div>

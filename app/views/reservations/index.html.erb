@@ -1,15 +1,28 @@
-<h3> Status des clebards </h3>
-  <ul>
-    <% @reservations.each do |reservation| %>
-    <%= cl_image_tag reservation.dog.photo, height: 300, width: 400, crop: :fill, id: "photo" %>
-    <li> <%= reservation.dog.name %></li>
-    <li> <%= reservation.dog.age %></li>
-    <li> <%= reservation.dog.breed %></li>
-    <li> <%= reservation.dog.gender %></li>
-    <li> <%= reservation.dog.description %></li>
+<div class="wrapper">
+  <h2 id="dashboard_title"> Status des clebards </h2>
 
-      <%= link_to 'Voir ma réservation', user_reservation_path(current_user, reservation) %> </li>
-    <% end %>
-  </ul>
-
-
+  <% @reservations.each do |reservation| %>
+    <div class="profile-card">
+      <div class="blue-div">
+      </div>
+      <div class="row">
+          <div class="col-xs-12 col-md-3">
+            <%= cl_image_tag reservation.dog.photo, height: 500, width: 600, crop: :fill, id: "photo" %></div>
+          <div class="col-xs-12 col-md-6">
+            <h3><%= reservation.dog.name %></h3>
+            <p><%= reservation.dog.age %></p>
+            <p><%= reservation.dog.description %></p>
+          </div>
+          <div class="col-xs-12 col-md-3">
+          <button class="btn btn-info">En attente</button>
+          <button class="btn btn-warning">Confirmé</button>
+          <button class="btn btn-warning">Refusé</button>
+          <button class="btn btn-success">Validé</button>
+          <%#= link_to "Supprimer ma réservation", dog_reservation_path([:dog_id]),
+             method: :delete,
+             data: { confirm: "Confirmez-vous votre annulation ?" } %>
+          </div>
+      </div>
+    </div>
+  <% end %>
+</div>

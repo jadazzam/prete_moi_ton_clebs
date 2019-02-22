@@ -9,13 +9,17 @@
           <div class="col-xs-12 col-md-3">
             <%= cl_image_tag reservation.dog.photo, height: 500, width: 600, crop: :fill, id: "photo" %></div>
           <div class="col-xs-12 col-md-6">
-            <h3 class="headers"><%= reservation.dog.name %></h3>
-            <p class="headers"><%= reservation.dog.age %></p>
-            <p class="headers"><%= reservation.dog.description %></p>
+            <h3 class="headers">Name : <%= reservation.dog.name %></h3>
+            <p class="headers">Âge : <%= reservation.dog.age %> ans</p>
+            <p class="headers">Description : <%= reservation.dog.description %></p>
           </div>
           <div class="col-xs-12 col-md-3" class="status-of-reservation">
             <% if reservation.confirmed == nil %>
               <p id="en-attente">En attente</p>
+            <%= link_to "Annuler ma demande", dog_reservation_path(reservation.dog, reservation),
+            method: :delete,
+            data: { confirm: "Êtes-vous sûr de vouloir annuler la demande ?" },
+            id: 'button-annulation' %>
             <% elsif reservation.confirmed == true %>
               <p id="valide">Validé</p>
             <% else %>

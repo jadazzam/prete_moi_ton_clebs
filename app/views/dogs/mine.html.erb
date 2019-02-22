@@ -3,6 +3,9 @@
   <div class="margin-container">
     <div class="row">
       <div class="row">
+      </div>
+          <%= link_to "Ajouter un chien", new_dog_path, class: "btn btn-lg"%>
+      </div>
         <% @dogs.each do |dog| %>
           <div class="col-xs-12 col-md-4">
             <div class="card" style="background-image: url(<%= dog.photo.url %>);">
@@ -19,9 +22,3 @@
         <% end %>
       </div>
     </div>
-  </div>
-      <%= link_to "Confies un clebs", new_dog_path, class: "btn btn-lg"%>
-</div>
-
-
-<!-- z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y; -->

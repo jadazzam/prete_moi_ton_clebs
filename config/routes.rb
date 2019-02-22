@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:edit, :show, :destroy] do
     resources :reservations, only: [:index, :show, :destroy]
-    resources :dogs, only: [:index]
+    resources :dogs, only: [:index, :destroy]
   end
   get 'owner', to: 'reservations#index_owner', as: :index_owner
 end

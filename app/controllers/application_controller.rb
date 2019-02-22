@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
     # For additional fields in app/views/devise/registrations/new.html.erb
 
     # For additional in app/views/devise/registrations/edit.html.erb
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :description, :phone_number])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :description, :phone_number, :photo, :photo_cache])
   end
 end

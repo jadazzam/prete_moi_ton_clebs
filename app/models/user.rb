@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :dogs
   has_many :dogs_rent, through: :reservations, source: :dogs
   has_many :reservations
+  mount_uploader :photo, PhotoUploader
 end

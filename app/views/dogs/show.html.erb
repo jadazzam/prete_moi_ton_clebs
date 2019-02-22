@@ -17,10 +17,9 @@
             </div>
             <%= simple_form_for [@dog, @reservation] do |f| %>
               <%= f.button :submit, "Envoyer ma demande", class: "btn btn-lg" %>
-              <%= link_to "Retirer mon chien", dog_path,
-            method: :delete,
-            data: { confirm: "Vraiment?" },
-            class: 'btn btn-warning' %>
+              <%= link_to "Supprimer ma réservation", dog_reservation_path([:dog_id]),
+                 method: :delete,
+                 data: { confirm: "Confirmez-vous votre annulation ?" } %>
             <% end %>
         </div>
       </div>

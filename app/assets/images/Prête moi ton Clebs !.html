@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:3000/reservations -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.algolia-places {
+  width: 100%;
+}
+
+.ap-input, .ap-hint {
+  width: 100%;
+  padding-right: 35px;
+  padding-left: 16px;
+  line-height: 40px;
+  height: 40px;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  outline: none;
+  font: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+.ap-input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.ap-input::-ms-clear {
+  display: none;
+}
+
+.ap-input:hover ~ .ap-input-icon svg,
+.ap-input:focus ~ .ap-input-icon svg,
+.ap-input-icon:hover svg {
+  fill: #aaaaaa;
+}
+
+.ap-dropdown-menu {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-top: 3px;
+  overflow: hidden;
+}
+
+.ap-suggestion {
+  cursor: pointer;
+  height: 46px;
+  line-height: 46px;
+  padding-left: 18px;
+  overflow: hidden;
+}
+
+.ap-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.ap-address {
+  font-size: smaller;
+  margin-left: 12px;
+  color: #aaaaaa;
+}
+
+.ap-suggestion-icon {
+  margin-right: 10px;
+  width: 14px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.ap-suggestion-icon svg {
+  -webkit-transform: scale(0.9) translateY(2px);
+          transform: scale(0.9) translateY(2px);
+  fill: #cfcfcf;
+}
+
+.ap-input-icon {
+  border: 0;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 16px;
+  outline: none;
+}
+
+.ap-input-icon.ap-icon-pin {
+  cursor: initial;
+}
+
+.ap-input-icon svg {
+  fill: #cfcfcf;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.ap-cursor {
+  background: #efefef;
+}
+
+.ap-cursor .ap-suggestion-icon svg {
+  -webkit-transform: scale(1) translateY(2px);
+          transform: scale(1) translateY(2px);
+  fill: #aaaaaa;
+}
+
+.ap-footer {
+  opacity: .8;
+  text-align: right;
+  padding: .5em 1em .5em 0;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.ap-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ap-footer a svg {
+  vertical-align: middle;
+}
+
+.ap-footer:hover {
+  opacity: 1;
+}
+</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prête moi ton Clebs !</title>
+
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="1nNPDjn8EPu3iW2qXcZby2DzC/71tT+AuWlG/R3Fx1Mv1tH2QBVEEcA2esbD/2nD36I00pO344OCNqlbFh1lZg==">
+    <meta name="action-cable-url" content="/cable">
+    <link rel="stylesheet" media="all" href="./Prête moi ton Clebs !_files/application-d838be3d1adffa632b1505e4d2f1cc4dc898204dda751fceee7725eba3057cc8.css">
+    <link rel="stylesheet" media="all" href="./Prête moi ton Clebs !_files/application-4f2e95db95c07682b2dcc1eaffafb0e9.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./Prête moi ton Clebs !_files/clebs-70c5a6e4c4b676f55d47697b17a634ce157427f12b50977374683e5defeb3c22.png">
+  </head>
+  <body cz-shortcut-listen="true">
+    
+    <div class="navbar-wagon">
+  <!-- Logo -->
+  <a class="navbar-wagon-brand" href="http://localhost:3000/">
+    <img height="50" src="./Prête moi ton Clebs !_files/clebs-70c5a6e4c4b676f55d47697b17a634ce157427f12b50977374683e5defeb3c22.png">
+</a>
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+
+      <!-- Links when logged in -->
+      <a class="navbar-wagon-item navbar-wagon-link" href="http://localhost:3000/reservations#">Cherche par race</a>
+      <a class="navbar-wagon-item navbar-wagon-link" href="http://localhost:3000/dogs/new">Confie ton clebs</a>
+      <a class="navbar-wagon-item navbar-wagon-link" href="http://localhost:3000/reservations#">Messagerie</a>
+
+      <!-- Avatar with dropdown menu -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <img class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown" src="./Prête moi ton Clebs !_files/45691560">
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <a href="http://localhost:3000/users/30">
+                <i class="fa fa-user"></i> Profile
+</a>            </li>
+            <li>
+              <a href="http://localhost:3000/users/edit">
+                <i class="fa fa-cog"></i>  Paramètres
+</a>            </li>
+            <li>
+              <a rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">
+                <i class="fa fa-sign-out"></i>  Se déconnecter
+</a>            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+  <!-- Dropdown list appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="http://localhost:3000/reservations#">Liens mobiles</a></li>
+        <li><a href="http://localhost:3000/reservations#">Un autre</a></li>
+        <li><a href="http://localhost:3000/reservations#">Encore un autre</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <div class="wrapper">
+  <p> Status des clebards </p>
+
+  <div class="profile-card">
+    <div class="blue-div">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <img src="./Prête moi ton Clebs !_files/128.jpg">
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <h2>Rosie</h2>
+          <h3>2</h3>
+          <p>Lived all my life on the top of mount Fuji, learning the way to be a Ninja Dev.</p>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <p>Cancel</p>
+        </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="blue-div">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <img src="./Prête moi ton Clebs !_files/128.jpg">
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <h2>Rosie</h2>
+          <h3>2</h3>
+          <p>Lived all my life on the top of mount Fuji, learning the way to be a Ninja Dev.</p>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <p>Cancel</p>
+        </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="blue-div">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <img src="./Prête moi ton Clebs !_files/128.jpg">
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <h2>Jasper</h2>
+          <h3>7</h3>
+          <p>Lived all my life on the top of mount Fuji, learning the way to be a Ninja Dev.</p>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <p>Cancel</p>
+        </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="blue-div">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <img src="./Prête moi ton Clebs !_files/128.jpg">
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <h2>Jasper</h2>
+          <h3>7</h3>
+          <p>Lived all my life on the top of mount Fuji, learning the way to be a Ninja Dev.</p>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <p>Cancel</p>
+        </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="blue-div">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <img src="./Prête moi ton Clebs !_files/128.jpg">
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <h2>Jasper</h2>
+          <h3>7</h3>
+          <p>Lived all my life on the top of mount Fuji, learning the way to be a Ninja Dev.</p>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <p>Cancel</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+    <div class="footer">
+  <div class="footer-links">
+    <a href="http://localhost:3000/reservations#"><i class="fab fa-github"></i></a>
+    <a href="http://localhost:3000/reservations#"><i class="fab fa-instagram"></i></a>
+    <a href="http://localhost:3000/reservations#"><i class="fab fa-facebook"></i></a>
+    <a href="http://localhost:3000/reservations#"><i class="fab fa-twitter"></i></a>
+    <a href="http://localhost:3000/reservations#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Copyright © 2019 All doggies<i class="fas fa-heart"></i> reserved.
+  </div>
+</div>
+
+
+    <script src="./Prête moi ton Clebs !_files/application-f41cf12bfbe0180067871cece241df089cdef276a42d7007e88a0aecfd6ba58e.js"></script>
+    <script src="./Prête moi ton Clebs !_files/application-726005ebd465e9fb9e42.js"></script>
+<!--     <p class="notice"></p>
+    <p class="alert"></p> -->
+  
+
+</body></html>

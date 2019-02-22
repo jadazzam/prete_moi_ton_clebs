@@ -29,7 +29,7 @@ dog1 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "11 Rue Lapeyrere 75018 Paris",
-    gender: "Spitz",
+    gender: "Male",
     description: "Very cute, likes to run fast",
     )
 bobby = User.create(name: "bobby", email: "bobby@user.com", phone_number: "061", description: "Bobby loves dogs", password: "12345678")
@@ -43,7 +43,7 @@ dog2 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "107 rue du faubourg du temple 75010 paris",
-    gender: "Spitz",
+    gender: "Male",
     description: "Very fat, likes to cuddle",
     )
 paul = User.create(name: "paul", email: "paul@user.com", phone_number: "061", description: "Paul loves dogs", password: "12345678")
@@ -57,7 +57,7 @@ dog3 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "10 rue montcalm 75018 paris",
-    gender: "Spitz",
+    gender: "Male",
     description: "Sleepy, very sleepy",
     )
 charles = User.create(name: "charles", email: "charles@user.com", phone_number: "061", description: "Charles loves dogs", password: "12345678")
@@ -71,7 +71,7 @@ dog4 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "67 boulevard ornano 75018 paris",
-    gender: "Spitz",
+    gender: "Female",
     description: "Playful & very friendly",
     )
 pauline = User.create(name: "pauline", email: "pauline@user.com", phone_number: "061", description: "Pauline loves dogs", password: "12345678")
@@ -85,7 +85,7 @@ dog5 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "67 rue philippe de girard 75018 paris",
-    gender: "Spitz",
+    gender: "Female",
     description: "Lovely and calm",
     )
 karolina = User.create(name: "karolina", email: "karolina@user.com", phone_number: "061", description: "karolina loves dogs", password: "12345678")
@@ -99,7 +99,7 @@ dog6 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "117 Rue Saint-Maur 75011 Paris",
-    gender: "Spitz",
+    gender: "Female",
     description: "Constantly asleep",
     )
 peo = User.create(name: "peo", email: "peo@user.com", phone_number: "061", description: "peo loves dogs", password: "12345678")
@@ -113,7 +113,7 @@ dog7 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "17 Rue de Belleville 75019 Paris",
-    gender: "Spitz",
+    gender: "Female",
     description: "Superactive dog",
     )
 leo = User.create(name: "leo", email: "leo@user.com", phone_number: "061", description: "leo loves dogs", password: "12345678")
@@ -127,7 +127,7 @@ dog8 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "13 Rue de Trétaigne 75018 Paris",
-    gender: "Spitz",
+    gender: "Female",
     description: "Allergic to other dogs",
     )
 jad = User.create(name: "jad", email: "jad@user.com", phone_number: "061", description: "jad loves dogs", password: "12345678")
@@ -141,7 +141,7 @@ dog9 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "65 Rue du Mont-Cenis 75018 Paris",
-    gender: "Spitz",
+    gender: "Female",
     description: "Cute, extremely cute",
     )
 val = User.create(name: "val", email: "val@user.com", phone_number: "061", description: "val loves dogs", password: "12345678")
@@ -155,7 +155,7 @@ dog10 = Dog.new(name: Faker::Creature::Dog.name,
     age: rand(0..15),
     breed: Faker::Creature::Dog.breed,
     address: "22 Rue Lapeyrere 75018 Paris",
-    gender: "Spitz",
+    gender: "Female",
     description: "Scared from strangers",
     )
 zelda = User.create(name: "zelda", email: "zelda@user.com", phone_number: "061", description: "zelda loves dogs", password: "12345678")

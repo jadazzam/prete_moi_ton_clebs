@@ -14,9 +14,9 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new
-    @reservation.dog_id = params[:dog_id]
+    @reservation = Reservation.new(reservation_params)
     @reservation.user_id = current_user.id
+    @reservation.dog = Dog.find(params[:dog_id])
     @reservation.save
     redirect_to user_reservations_path(current_user)
   end
@@ -32,5 +32,11 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
     redirect_to user_reservations_path(current_user)
+  end
+
+  private
+
+  def reservation_params
+    params.require(:reservation).permit(:starts_at, :ends_at)
   end
 end

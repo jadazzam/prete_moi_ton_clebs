@@ -9,9 +9,11 @@
           <div class="col-xs-12 col-md-3">
             <%= cl_image_tag reservation.dog.photo, height: 500, width: 600, crop: :fill, id: "photo" %></div>
           <div class="col-xs-12 col-md-6">
-            <h3 class="headers">Name : <%= reservation.dog.name %></h3>
-            <p class="headers">Âge : <%= reservation.dog.age %> ans</p>
+            <h3 class="headers"><%= reservation.dog.name %></h3>
+            <p class="headers">Âge : <%= reservation.dog.age %></p>
             <p class="headers">Description : <%= reservation.dog.description %></p>
+            <p class="headers">From: <%= reservation.starts_at %></p>
+            <p class="headers">To: <%= reservation.ends_at %></p>
           </div>
           <div class="col-xs-12 col-md-3" class="status-of-reservation">
             <% if reservation.confirmed == nil %>

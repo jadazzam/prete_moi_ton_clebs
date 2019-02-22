@@ -1,7 +1,13 @@
 <div class="wrapper">
   <div class="card-product-infos">
+    <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill , class: "user_photo"%>
     <h1> <%= @user.name %></h1>
     <p>Tel: <%= @user.phone_number %></p>
     <p>Moi: <%= @user.description %></p>
+  <%#= f.input :photo %>
+  <%#= f.input :photo_cache, as: :hidden %>
+   <!-- <i class="fas fa-pencil-alt"></i> -->  <%#= t(".profile", default: "Profil") %>
   </div>
 </div>
+
+

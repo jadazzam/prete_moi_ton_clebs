@@ -14,28 +14,22 @@
             <p><%= @dog.gender%></p>
             <p><%= @dog.description %></p>
             </div>
-            <%= simple_form_for [@dog, @reservation] do |f| %>
-
-              <% if @dog.user_id != current_user.id %>
-                <%= simple_form_for :search, method: "get" do |f| %>
-                  <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-                  <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <% if @dog.user_id != current_user.id %>
+              <%= simple_form_for [@dog, @reservation] do |f| %>
+                <%= f.input :starts_at, as: :string, input_html: {class: "datepicker"} %>
+                <%= f.input :ends_at, as: :string, input_html: {class: "datepicker"} %>
                 <%= f.button :submit, "Je m'en occupe!", class: "btn btn-lg" %>
               <% end %>
-              <% if @dog.user_id == current_user.id %>
+            <% else %>
               <%= link_to "Retirer mon chien", dog_path,
-            method: :delete,
-            data: { confirm: "Vraiment?" },
-            class: 'btn btn-warning' %>
-            <% end %>
+                method: :delete,
+                data: { confirm: "Vraiment?" },
+                class: 'btn btn-warning' %>
             <% end %>
             <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-
-    <% end %>
-
-  </div>
         </div>
-  </div>
+      </div>
+    </div>
   </div>
 </div>
 

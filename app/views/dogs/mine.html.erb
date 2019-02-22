@@ -1,13 +1,12 @@
 <div class="wrapper">
-  <h1>Mes clebards</h1>
+  <h1 class="headers">Mes clebards</h1>
   <div class="margin-container">
     <div class="row">
-      <div class="col-xs-12 col-md-12">
       <div class="row">
         <% @dogs.each do |dog| %>
-          <div class="col-xs-12 col-sm-3">
+          <div class="col-xs-12 col-md-4">
             <div class="card" style="background-image: url(<%= dog.photo.url %>);">
-              <div class="card-category">À proximité</div>
+              <div class="card-category">Ceci est ton chien</div>
                   <%= link_to "", dog_path(dog), class: "card-link" %>
               <div class="card-description">
                 <div>
@@ -19,9 +18,9 @@
           </div>
         <% end %>
       </div>
-      </div>
     </div>
   </div>
+      <%= link_to "Confies un clebs", new_dog_path, class: "btn btn-lg"%>
 </div>
 
 

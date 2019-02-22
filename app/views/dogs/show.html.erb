@@ -8,11 +8,11 @@
         <div class="card-product-infos">
             <div class="description">
             <h1><%= @dog.name %></h1>
-            <p><%= @dog.age %></p>
-            <p><%= @dog.address %></p>
-            <p><%= @dog.breed %></p>
-            <p><%= @dog.gender%></p>
-            <p><%= @dog.description %></p>
+            <p>Âge : <%= @dog.age %>ans.</p>
+            <p>Adresse : <%= @dog.address %>.</p>
+            <p>Race : <%= @dog.breed %>.</p>
+            <p>Genre : <%= @dog.gender%>.</p>
+            <p>Description : <%= @dog.description %>.</p>
             </div>
             <% if @dog.user_id != current_user.id %>
               <%= simple_form_for [@dog, @reservation] do |f| %>

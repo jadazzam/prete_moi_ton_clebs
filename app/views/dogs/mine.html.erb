@@ -5,7 +5,7 @@
       <div class="col-xs-12 col-md-12">
       <div class="row">
         <% @dogs.each do |dog| %>
-          <div class="col-xs-12 col-sm-3">
+          <div class="col-xs-12 col-sm-4">
             <div class="card" style="background-image: url(<%= dog.photo.url %>);">
               <div class="card-category">À proximité</div>
                   <%= link_to "", dog_path(dog), class: "card-link" %>
@@ -15,6 +15,7 @@
                   <p><%= dog.breed %></p>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         <% end %>
